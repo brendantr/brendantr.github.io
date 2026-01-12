@@ -18,7 +18,7 @@
 
   <!-- App header -->
   <rect x="80" y="160" width="560" height="60" rx="16" fill="#eff6ff"/>
-  <text x="110" y="201" font-family="Inter, system-ui, -apple-system" font-size="28" fill="#1f2937">SimuListen</text>
+  <text x="110" y="201" font-family="Inter, system-ui, -apple-system" font-size="28" fill="#1f2937">Simulisten</text>
 
   <!-- Cards -->
   <rect x="80" y="250" width="560" height="140" rx="20" fill="#f8fafc" stroke="#e2e8f0"/>
