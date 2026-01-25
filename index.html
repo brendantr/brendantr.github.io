@@ -22,16 +22,22 @@
             </a>
             <nav class="nav">
                 <a href="#features">Features</a>
-                <a href="#about">About</a>
+                <a href="#use-cases">Use Cases</a>
+                <a href="#faq">FAQ</a>
                 <a href="#download" class="button button-ghost">Download</a>
             </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
     <!-- Hero -->
     <section class="hero">
         <div class="container hero-grid">
-            <div class="hero-copy">
+            <div class="hero-copy reveal">
                 <h1>Focus with dual-track audio.<br>Learn while you work.</h1>
                 <p class="lead">
                     Simulisten combines audiobooks, podcasts, or learning content with focus music 
@@ -43,6 +49,61 @@
                         Join TestFlight Beta
                     </a>
                     <a class="button button-link" href="#features">See how it works</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <img src="assets/mockups/app-mockup.svg" alt="Simulisten app interface showing dual-track audio controls" class="app-mockup">
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Install -->
+    <section class="install-guide section-pad">
+        <div class="container">
+            <header class="section-head">
+                <h2>How to install Simulisten</h2>
+                <p>Follow these simple steps to join our beta and start using Simulisten.</p>
+            </header>
+
+            <div class="install-steps">
+                <div class="install-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Install TestFlight</h3>
+                        <p>Click "Join TestFlight Beta" above. If you don't have TestFlight, you'll be prompted to download it from the App Store first.</p>
+                        <div class="step-image">
+                            <img src="assets/screenshots/testflight-app-store.png" alt="TestFlight download page in App Store" class="screenshot">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="install-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Download Simulisten</h3>
+                        <p>After installing TestFlight, click "Join TestFlight Beta" again to open the Simulisten invitation and install the app.</p>
+                        <div class="step-image">
+                            <img src="assets/screenshots/simulisten-testflight.png" alt="Simulisten app page in TestFlight" class="screenshot">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="install-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Start listening</h3>
+                        <p>Open Simulisten to explore the Listen Now view and Library. Import your audiobooks and music to begin dual-track listening.</p>
+                        <div class="step-images">
+                            <div class="app-screenshot">
+                                <img src="assets/screenshots/listen-now-view.png" alt="Simulisten Listen Now interface showing dual-track audio controls" class="screenshot">
+                                <p class="screenshot-caption">Listen Now View</p>
+                            </div>
+                            <div class="app-screenshot">
+                                <img src="assets/screenshots/library-learning.png" alt="Simulisten Library showing audiobook collection" class="screenshot">
+                                <p class="screenshot-caption">Library - Learning</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -104,6 +165,60 @@
         </div>
     </section>
 
+    <!-- Use Cases -->
+    <section id="use-cases" class="use-cases section-pad">
+        <div class="container">
+            <header class="section-head reveal">
+                <h2>Perfect for every learning scenario</h2>
+                <p>Whether you're studying, commuting, or working from home, Simulisten adapts to your lifestyle.</p>
+            </header>
+
+            <div class="use-case-grid">
+                <article class="use-case-card reveal">
+                    <div class="use-case-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                        </svg>
+                    </div>
+                    <h3>Study Sessions</h3>
+                    <p>Combine textbook audiobooks with lo-fi beats. Perfect for reviewing material while maintaining focus with ambient background music.</p>
+                    <div class="use-case-example">
+                        <span class="track">📚 "Organic Chemistry" + 🎵 Lo-fi Study Beats</span>
+                    </div>
+                </article>
+
+                <article class="use-case-card reveal">
+                    <div class="use-case-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M8 2v4l-3 3h3v11l3-3 3 3V9h3l-3-3V2z"/>
+                        </svg>
+                    </div>
+                    <h3>Daily Commute</h3>
+                    <p>Make your commute productive by listening to podcasts or language lessons with calming background music to reduce travel stress.</p>
+                    <div class="use-case-example">
+                        <span class="track">🎙️ "Spanish Lessons" + 🎵 Ambient Soundscapes</span>
+                    </div>
+                </article>
+
+                <article class="use-case-card reveal">
+                    <div class="use-case-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="7" height="9" x="3" y="3" rx="1"/>
+                            <rect width="7" height="5" x="14" y="3" rx="1"/>
+                            <rect width="7" height="9" x="14" y="12" rx="1"/>
+                            <rect width="7" height="5" x="3" y="16" rx="1"/>
+                        </svg>
+                    </div>
+                    <h3>Work From Home</h3>
+                    <p>Listen to professional development content or industry podcasts while working, with focus music to maintain productivity.</p>
+                    <div class="use-case-example">
+                        <span class="track">📈 "Marketing Trends" + 🎵 Classical Focus Music</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- About -->
     <section id="about" class="about section-pad">
         <div class="container about-grid">
@@ -119,6 +234,90 @@
                     study sessions, or anywhere you need to focus without distractions. No internet required, 
                     no data tracking—just you, your learning content, and your focus music.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq section-pad">
+        <div class="container">
+            <header class="section-head reveal">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about Simulisten's dual-track audio experience.</p>
+            </header>
+
+            <div class="faq-grid">
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How does dual-track audio work?</span>
+                        <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Simulisten plays two separate audio files simultaneously—your learning content (audiobooks, podcasts) and background music. You can control the volume, playback, and timing of each track independently.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What file formats are supported?</span>
+                        <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Simulisten supports MP3, M4A, AAC, and WAV audio formats. You can import files from your device's storage or sync from cloud services.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Does it work offline?</span>
+                        <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Once your audio files are loaded into Simulisten, everything works completely offline. Perfect for commutes, flights, or areas with poor internet connectivity.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can I use my own music and audiobooks?</span>
+                        <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! Simulisten works with your existing audio library. Import your audiobooks, podcasts, music, and other audio content directly into the app.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What are the system requirements?</span>
+                        <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Simulisten requires iOS 14.0 or later and is compatible with iPhone, iPad, and iPod touch. The app works great on devices with 2GB+ RAM for optimal dual-track performance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Is this a subscription service?</span>
+                        <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Simulisten is currently in beta testing. Pricing details will be announced before the official App Store launch. Beta testers will receive early access to pricing information.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
