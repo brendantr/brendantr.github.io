@@ -463,27 +463,13 @@ body {
 
 /* Hero Updates */
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-  max-width: none;
-  text-align: left;
-}
-
-.hero-copy {
-  max-width: 540px;
-}
-
-.hero-visual {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.app-mockup {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+.hero-copy {
+  max-width: none;
 }
 
 /* Use Cases */
@@ -634,14 +620,6 @@ body {
     grid-template-columns: 1fr;
     gap: 48px;
     text-align: center;
-  }
-  
-  .hero-copy {
-    max-width: none;
-  }
-  
-  .app-mockup {
-    max-width: 300px;
   }
   
   .use-case-grid {
