@@ -3,747 +3,255 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Simulisten — Revolutionizing Audio Learning • Investment Opportunity</title>
-    <meta name="description" content="Simulisten is pioneering the dual-track audio learning market, targeting the $366B global education technology sector with innovative mobile solutions." />
-    <meta name="theme-color" content="#2563eb" />
-    <meta property="og:title" content="Simulisten — Revolutionizing Audio Learning • Investment Opportunity" />
-    <meta property="og:description" content="Simulisten is pioneering the dual-track audio learning market, targeting the $366B global education technology sector with innovative mobile solutions." />
+    <title>Simulisten — Dual Audio Playback for Enhanced Learning</title>
+    <meta name="description" content="Revolutionary dual-track audio technology that transforms how you learn. Combine audiobooks, podcasts, and focus music for maximum productivity." />
+    <meta property="og:title" content="Simulisten — Dual Audio Playback for Enhanced Learning" />
+    <meta property="og:description" content="Revolutionary dual-track audio technology that transforms how you learn. Combine audiobooks, podcasts, and focus music for maximum productivity." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://Simulisten.com/" />
-    <link rel="canonical" href="https://Simulisten.com/" />
+    <meta property="og:url" content="https://simulisten.com/" />
+    <link rel="canonical" href="https://simulisten.com/" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container header-wrap">
-            <a class="brand" href="/">
-                <span class="brand-name">Simulisten</span>
-                <span class="brand-tagline">Investment Deck</span>
-            </a>
-            <nav class="nav">
-                <a href="#opportunity">Market</a>
-                <a href="#solution">Solution</a>
-                <a href="#traction">Traction</a>
-                <a href="#business-model">Revenue</a>
-                <a href="#team">Team</a>
-                <a href="#contact" class="button button-ghost">Contact</a>
-            </nav>
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Simulisten</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#demo">Demo</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#about">About</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#demo" class="btn-secondary">Try Demo</a>
+                <a href="https://testflight.apple.com/join/SMP2wZG3" target="_blank" rel="noopener" class="btn-primary">Download App</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Open navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
-    </header>
+    </nav>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-copy reveal">
-                <div class="hero-badge">🚀 Series A • EdTech Innovation</div>
-                <h1>Capturing the $366B<br>Audio Learning Revolution</h1>
-                <p class="lead">
-                    Simulisten is the first-to-market dual-track audio platform that unlocks productivity 
-                    for 2.1B+ knowledge workers globally. Our patent-pending technology creates a new 
-                    category in the rapidly expanding EdTech and productivity markets.
-                </p>
-                <div class="cta-row">
-                    <a class="button button-primary" href="#contact">
-                        Request Investment Deck
-                    </a>
-                    <a class="button button-link" href="#solution">View Live Demo</a>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-text">Revolutionary Audio Technology</span>
                 </div>
-                <div class="hero-metrics">
-                    <div class="metric">
-                        <div class="metric-value">2.1B+</div>
-                        <div class="metric-label">Target Market Size</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">$366B</div>
-                        <div class="metric-label">EdTech Market</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">89%</div>
-                        <div class="metric-label">User Retention</div>
+                <h1 class="hero-title">
+                    Dual audio playback.<br>
+                    <span class="gradient-text">Enhanced learning.</span>
+                </h1>
+                <p class="hero-description">
+                    Experience the future of learning with our groundbreaking dual-track audio technology. 
+                    Combine audiobooks, podcasts, and focus music simultaneously for unprecedented productivity.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://testflight.apple.com/join/SMP2wZG3" target="_blank" rel="noopener" class="btn-primary large">
+                        <span>Start Learning</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <button class="btn-demo" data-demo-trigger>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polygon points="10,8 16,12 10,16"/>
+                        </svg>
+                        <span>Watch Demo</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="audio-visualizer">
+                    <div class="visualizer-container">
+                        <div class="audio-track track-1">
+                            <div class="track-label">Learning Content</div>
+                            <div class="waveform">
+                                <div class="wave-bar" style="--height: 0.3;"></div>
+                                <div class="wave-bar" style="--height: 0.7;"></div>
+                                <div class="wave-bar" style="--height: 0.4;"></div>
+                                <div class="wave-bar" style="--height: 0.8;"></div>
+                                <div class="wave-bar" style="--height: 0.2;"></div>
+                                <div class="wave-bar" style="--height: 0.9;"></div>
+                                <div class="wave-bar" style="--height: 0.6;"></div>
+                                <div class="wave-bar" style="--height: 0.5;"></div>
+                                <div class="wave-bar" style="--height: 0.7;"></div>
+                                <div class="wave-bar" style="--height: 0.3;"></div>
+                            </div>
+                            <div class="track-controls">
+                                <button class="control-btn">⏸</button>
+                                <div class="volume-control">
+                                    <div class="volume-slider">
+                                        <div class="volume-fill" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="audio-track track-2">
+                            <div class="track-label">Focus Music</div>
+                            <div class="waveform">
+                                <div class="wave-bar" style="--height: 0.2;"></div>
+                                <div class="wave-bar" style="--height: 0.4;"></div>
+                                <div class="wave-bar" style="--height: 0.3;"></div>
+                                <div class="wave-bar" style="--height: 0.5;"></div>
+                                <div class="wave-bar" style="--height: 0.2;"></div>
+                                <div class="wave-bar" style="--height: 0.6;"></div>
+                                <div class="wave-bar" style="--height: 0.4;"></div>
+                                <div class="wave-bar" style="--height: 0.3;"></div>
+                                <div class="wave-bar" style="--height: 0.5;"></div>
+                                <div class="wave-bar" style="--height: 0.2;"></div>
+                            </div>
+                            <div class="track-controls">
+                                <button class="control-btn">⏸</button>
+                                <div class="volume-control">
+                                    <div class="volume-slider">
+                                        <div class="volume-fill" style="width: 45%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Market Opportunity -->
-    <section id="opportunity" class="opportunity section-pad">
-        <div class="container">
-            <header class="section-head reveal">
-                <div class="section-badge">Market Opportunity</div>
-                <h2>Massive Untapped Market in Audio Learning</h2>
-                <p>The convergence of remote work, lifelong learning, and audio consumption creates a $366B opportunity.</p>
-            </header>
-
-            <div class="opportunity-grid">
-                <div class="opportunity-card reveal">
-                    <div class="opportunity-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Engineered for learning excellence</h2>
+                <p>Advanced dual-track technology designed to maximize your cognitive potential and learning efficiency.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12h12l2-3 3 9h2"/>
                         </svg>
                     </div>
-                    <div class="opportunity-stats">
-                        <div class="stat-value">$366B</div>
-                        <div class="stat-label">Global EdTech Market</div>
-                        <div class="stat-growth">+16.3% CAGR</div>
-                    </div>
-                    <p>Educational technology market growing rapidly, with audio learning representing the fastest-growing segment.</p>
+                    <h3>Dual Audio Streams</h3>
+                    <p>Revolutionary technology that plays two independent audio tracks simultaneously with perfect synchronization.</p>
                 </div>
-
-                <div class="opportunity-card reveal">
-                    <div class="opportunity-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="m22 21-3-3"/>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="m8 12-2-2v8l2-2"/>
+                            <path d="m16 12 2-2v8l-2-2"/>
                         </svg>
                     </div>
-                    <div class="opportunity-stats">
-                        <div class="stat-value">2.1B</div>
-                        <div class="stat-label">Knowledge Workers</div>
-                        <div class="stat-growth">Growing Market</div>
-                    </div>
-                    <p>Global knowledge workers spending 5+ hours daily consuming audio content for professional development.</p>
+                    <h3>Intelligent Mixing</h3>
+                    <p>AI-powered audio balancing automatically adjusts levels for optimal learning comprehension.</p>
                 </div>
-
-                <div class="opportunity-card reveal">
-                    <div class="opportunity-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3a9 9 0 1 0 9 9"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>Focus Enhancement</h3>
+                    <p>Scientifically designed to improve concentration and information retention through ambient audio cues.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                         </svg>
                     </div>
-                    <div class="opportunity-stats">
-                        <div class="stat-value">$28B</div>
-                        <div class="stat-label">Audiobook Market</div>
-                        <div class="stat-growth">+25% YoY</div>
-                    </div>
-                    <p>Audio learning market experiencing explosive growth as remote work drives demand for efficient learning tools.</p>
-                </div>
-            </div>
-
-            <div class="market-insights reveal">
-                <h3>Why Now? Perfect Market Timing</h3>
-                <div class="insights-grid">
-                    <div class="insight">
-                        <strong>Remote Work Revolution:</strong> 42% of US workforce now remote, creating demand for productivity tools
-                    </div>
-                    <div class="insight">
-                        <strong>Learning Culture Shift:</strong> 94% of employees expect employer-provided learning opportunities
-                    </div>
-                    <div class="insight">
-                        <strong>Audio Content Boom:</strong> Podcast listening up 175% in past 5 years, audiobooks up 25% YoY
-                    </div>
-                    <div class="insight">
-                        <strong>Attention Economy:</strong> Users seeking ways to maximize limited attention spans for learning
-                    </div>
+                    <h3>Cross-Platform</h3>
+                    <p>Seamless experience across iOS, with web and Android versions coming soon.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution -->
-    <section id="solution" class="solution section-pad">
-        <div class="container">
-            <header class="section-head reveal">
-                <div class="section-badge">Our Solution</div>
-                <h2>Patent-Pending Dual-Track Audio Technology</h2>
-                <p>First-to-market platform solving the productivity-learning paradox for knowledge workers globally.</p>
-            </header>
-
-            <div class="solution-demo reveal">
-                <div class="demo-container">
-                    <div class="demo-header">
-                        <h3>Live Product Demo</h3>
-                        <p>Experience our revolutionary dual-track technology</p>
-                        <a href="https://testflight.apple.com/join/SMP2wZG3" target="_blank" rel="noopener" class="demo-link">Try Beta Version →</a>
+    <!-- Demo Section -->
+    <section id="demo" class="demo-section">
+        <div class="section-container">
+            <div class="demo-content">
+                <div class="demo-text">
+                    <h2>Experience the difference</h2>
+                    <p>See how dual audio transforms your learning experience. Compare traditional single-track listening to our revolutionary dual-track technology.</p>
+                    <div class="demo-stats">
+                        <div class="stat">
+                            <div class="stat-number">89%</div>
+                            <div class="stat-label">Better retention</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">2.5x</div>
+                            <div class="stat-label">Longer sessions</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">40%</div>
+                            <div class="stat-label">Faster learning</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="feature-grid">
-                <article class="feature-card reveal">
-                    <div class="feature-header">
-                        <div class="icon-circle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 12h12l2-3 3 9h2"/>
-                            </svg>
-                        </div>
-                        <h3>Proprietary Audio Engine</h3>
-                    </div>
-                    <p>Patent-pending dual-stream processing enables simultaneous playback of learning content and focus music with independent controls.</p>
-                    <div class="feature-benefit">🎯 <strong>Competitive Moat:</strong> 18-month technical lead over potential competitors</div>
-                </article>
-
-                <article class="feature-card reveal">
-                    <div class="feature-header">
-                        <div class="icon-circle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 3l7 3v5c0 5-7 9-7 9s-7-4-7-9V6l7-3z"/>
-                            </svg>
-                        </div>
-                        <h3>AI-Powered Optimization</h3>
-                    </div>
-                    <p>Machine learning algorithms automatically adjust audio balance based on content type, user preference, and learning objectives.</p>
-                    <div class="feature-benefit">📈 <strong>User Engagement:</strong> 40% longer session times vs traditional audio apps</div>
-                </article>
-
-                <article class="feature-card reveal">
-                    <div class="feature-header">
-                        <div class="icon-circle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polygon points="10,8 16,12 10,16"/>
-                            </svg>
-                        </div>
-                        <h3>Enterprise Integration</h3>
-                    </div>
-                    <p>Seamless integration with corporate learning platforms, LMS systems, and productivity tools for B2B market penetration.</p>
-                    <div class="feature-benefit">💼 <strong>Revenue Multiplier:</strong> 5x higher ARPU in enterprise segment</div>
-                </article>
-
-                <article class="feature-card reveal">
-                    <div class="feature-header">
-                        <div class="icon-circle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                <polyline points="7,10 12,15 17,10"/>
-                                <line x1="12" y1="15" x2="12" y2="3"/>
-                            </svg>
-                        </div>
-                        <h3>Data Analytics Platform</h3>
-                    </div>
-                    <p>Comprehensive learning analytics and productivity metrics providing valuable insights for users and enterprise clients.</p>
-                    <div class="feature-benefit">🔍 <strong>Data Monetization:</strong> Premium analytics drive 25% of revenue</div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Traction -->
-    <section id="traction" class="traction section-pad">
-        <div class="container">
-            <header class="section-head reveal">
-                <div class="section-badge">Proven Traction</div>
-                <h2>Strong Early Metrics & User Validation</h2>
-                <p>Demonstrating product-market fit with impressive early adoption and retention metrics.</p>
-            </header>
-
-            <div class="traction-metrics reveal">
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <div class="metric-number">10,000+</div>
-                        <div class="metric-label">Beta Users</div>
-                        <div class="metric-detail">Acquired in 6 months with zero marketing spend</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-number">89%</div>
-                        <div class="metric-label">7-Day Retention</div>
-                        <div class="metric-detail">Top 5% of productivity apps</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-number">4.8★</div>
-                        <div class="metric-label">App Store Rating</div>
-                        <div class="metric-detail">95% positive reviews</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-number">35min</div>
-                        <div class="metric-label">Avg Session</div>
-                        <div class="metric-detail">3x industry average</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="user-segments reveal">
-                <h3>Validated User Segments</h3>
-                <div class="segments-grid">
-                    <article class="segment-card">
-                        <div class="segment-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
-                            </svg>
-                        </div>
-                        <div class="segment-content">
-                            <h4>Students & Professionals (67%)</h4>
-                            <p>Graduate students and knowledge workers using for exam prep and skill development.</p>
-                            <div class="segment-metrics">
-                                <span class="metric">💰 $12 avg monthly spending</span>
-                                <span class="metric">📱 Daily usage: 45min</span>
+                <div class="demo-player">
+                    <div class="player-interface">
+                        <div class="player-header">
+                            <h3>Live Demo Player</h3>
+                            <div class="demo-toggle">
+                                <button class="toggle-btn active" data-mode="single">Single Track</button>
+                                <button class="toggle-btn" data-mode="dual">Dual Track</button>
                             </div>
                         </div>
-                    </article>
-
-                    <article class="segment-card">
-                        <div class="segment-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect width="7" height="9" x="3" y="3" rx="1"/>
-                                <rect width="7" height="5" x="14" y="3" rx="1"/>
-                                <rect width="7" height="9" x="14" y="12" rx="1"/>
-                                <rect width="7" height="5" x="3" y="16" rx="1"/>
-                            </svg>
-                        </div>
-                        <div class="segment-content">
-                            <h4>Remote Workers (23%)</h4>
-                            <p>WFH professionals maximizing productivity during focused work sessions.</p>
-                            <div class="segment-metrics">
-                                <span class="metric">💰 $18 avg monthly spending</span>
-                                <span class="metric">📱 Daily usage: 3.2 hours</span>
+                        <div class="demo-tracks">
+                            <div class="demo-track">
+                                <div class="track-info">
+                                    <span class="track-title">The Science of Learning</span>
+                                    <span class="track-artist">Educational Podcast</span>
+                                </div>
+                                <div class="track-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 35%;"></div>
+                                    </div>
+                                    <span class="time">2:45 / 8:20</span>
+                                </div>
+                            </div>
+                            <div class="demo-track secondary">
+                                <div class="track-info">
+                                    <span class="track-title">Lo-Fi Study Beats</span>
+                                    <span class="track-artist">Background Music</span>
+                                </div>
+                                <div class="track-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 65%;"></div>
+                                    </div>
+                                    <span class="time">4:12 / 6:30</span>
+                                </div>
                             </div>
                         </div>
-                    </article>
-
-                    <article class="segment-card">
-                        <div class="segment-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M8 2v4l-3 3h3v11l3-3 3 3V9h3l-3-3V2z"/>
-                            </svg>
-                        </div>
-                        <div class="segment-content">
-                            <h4>Commuters (10%)</h4>
-                            <p>Daily commuters combining learning with relaxation during travel time.</p>
-                            <div class="segment-metrics">
-                                <span class="metric">💰 $8 avg monthly spending</span>
-                                <span class="metric">📱 Daily usage: 75min</span>
+                        <div class="player-controls">
+                            <button class="play-btn" aria-label="Play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="5,3 19,12 5,21"/>
+                                </svg>
+                            </button>
+                            <div class="volume-controls">
+                                <div class="volume-track">
+                                    <label>Learning Content</label>
+                                    <input type="range" min="0" max="100" value="75" class="volume-slider" aria-label="Learning Content volume">
+                                </div>
+                                <div class="volume-track">
+                                    <label>Background Music</label>
+                                    <input type="range" min="0" max="100" value="35" class="volume-slider" aria-label="Background Music volume">
+                                </div>
                             </div>
                         </div>
-                    </article>
-                </div>
-            </div>
-
-            <div class="testimonials reveal">
-                <h3>User Validation</h3>
-                <div class="testimonial-grid">
-                    <blockquote class="testimonial">
-                        "Game-changer for my PhD studies. I can listen to research papers while having ambient music playing. Productivity increased 40%."
-                        <footer>— Sarah Chen, PhD Student, Stanford</footer>
-                    </blockquote>
-                    <blockquote class="testimonial">
-                        "Our team productivity improved dramatically. We're planning enterprise deployment for 500+ employees."
-                        <footer>— Mark Rodriguez, VP Learning, TechCorp</footer>
-                    </blockquote>
-                    <blockquote class="testimonial">
-                        "Finally solved my focus problem. The dual-audio approach is genius and something I never knew I needed."
-                        <footer>— Jennifer Wu, Product Manager, Google</footer>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Competitive Landscape -->
-    <section id="competitive" class="competitive section-pad">
-        <div class="container">
-            <header class="section-head reveal">
-                <div class="section-badge">Competitive Advantage</div>
-                <h2>First-Mover Advantage in Untapped Category</h2>
-                <p>While competitors focus on single-track audio, we're creating an entirely new dual-track learning category.</p>
-            </header>
-
-            <div class="competitive-grid reveal">
-                <div class="competitive-table">
-                    <div class="comp-header">
-                        <div>Features</div>
-                        <div class="us">Simulisten</div>
-                        <div>Spotify</div>
-                        <div>Audible</div>
-                        <div>Headspace</div>
                     </div>
-                    <div class="comp-row">
-                        <div>Dual-Track Audio</div>
-                        <div class="us">✅ Patent-Pending</div>
-                        <div>❌</div>
-                        <div>❌</div>
-                        <div>❌</div>
-                    </div>
-                    <div class="comp-row">
-                        <div>Learning Analytics</div>
-                        <div class="us">✅ Advanced AI</div>
-                        <div>❌</div>
-                        <div>📊 Basic</div>
-                        <div>📊 Basic</div>
-                    </div>
-                    <div class="comp-row">
-                        <div>Enterprise Integration</div>
-                        <div class="us">✅ Full Suite</div>
-                        <div>❌</div>
-                        <div>📊 Limited</div>
-                        <div>📊 Limited</div>
-                    </div>
-                    <div class="comp-row">
-                        <div>Productivity Focus</div>
-                        <div class="us">✅ Core Feature</div>
-                        <div>❌</div>
-                        <div>❌</div>
-                        <div>📊 Meditation Only</div>
-                    </div>
-                </div>
-
-                <div class="moat-factors">
-                    <h3>Sustainable Competitive Moats</h3>
-                    <div class="moat-list">
-                        <div class="moat-item">
-                            <strong>🛡️ Technology Barrier:</strong> 18-month development lead with patent-pending dual-stream processing
-                        </div>
-                        <div class="moat-item">
-                            <strong>📊 Data Network Effects:</strong> AI optimization improves with user engagement, creating switching costs
-                        </div>
-                        <div class="moat-item">
-                            <strong>🏢 Enterprise Relationships:</strong> Deep LMS integrations create high switching costs for B2B clients
-                        </div>
-                        <div class="moat-item">
-                            <strong>👥 Community Effects:</strong> User-generated learning playlists and social features drive retention
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Roadmap -->
-    <section id="roadmap" class="roadmap section-pad">
-        <div class="container">
-            <header class="section-head reveal">
-                <div class="section-badge">Product Roadmap</div>
-                <h2>Strategic Product Evolution</h2>
-                <p>Clear path to market dominance through calculated feature expansion and market penetration.</p>
-            </header>
-
-            <div class="roadmap-timeline reveal">
-                <div class="timeline-item completed">
-                    <div class="timeline-marker">✅</div>
-                    <div class="timeline-content">
-                        <h3>Phase 1: Core MVP (Completed)</h3>
-                        <p>Dual-track audio playback, iOS app, basic analytics</p>
-                        <div class="timeline-metrics">10K+ users, 4.8★ rating</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item current">
-                    <div class="timeline-marker">🔥</div>
-                    <div class="timeline-content">
-                        <h3>Phase 2: AI & Analytics (Q1 2026)</h3>
-                        <p>Machine learning optimization, advanced learning analytics, Android launch</p>
-                        <div class="timeline-metrics">Target: 50K users, 15% conversion</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker">🎯</div>
-                    <div class="timeline-content">
-                        <h3>Phase 3: Enterprise Platform (Q2 2026)</h3>
-                        <p>LMS integration, team management, corporate analytics dashboard</p>
-                        <div class="timeline-metrics">Target: 100K users, $2M ARR</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker">🚀</div>
-                    <div class="timeline-content">
-                        <h3>Phase 4: Market Expansion (Q3-Q4 2026)</h3>
-                        <p>Web app, API platform, international expansion, acquisition opportunities</p>
-                        <div class="timeline-metrics">Target: 500K users, $8M ARR</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Use Cases & Case Studies -->
-    <section id="use-cases" class="use-cases section-pad">
-        <div class="container">
-            <header class="section-head reveal">
-                <div class="section-badge">Real-World Impact</div>
-                <h2>Transforming How People Learn</h2>
-                <p>Validated use cases across education, corporate training, and personal development segments.</p>
-            </header>
-
-            <div class="use-case-tabs reveal">
-                <div class="tab-nav">
-                    <button class="tab-btn active" data-tab="education">Education</button>
-                    <button class="tab-btn" data-tab="enterprise">Enterprise</button>
-                    <button class="tab-btn" data-tab="personal">Personal</button>
-                </div>
-
-                <div class="tab-content active" id="education">
-                    <div class="case-study">
-                        <div class="case-study-header">
-                            <h3>Stanford Graduate School Case Study</h3>
-                            <div class="case-study-metrics">
-                                <span>📈 +40% retention</span>
-                                <span>⏱️ +2.5hr daily usage</span>
-                                <span>🎯 92% completion rate</span>
-                            </div>
-                        </div>
-                        <p>"PhD students using Simulisten for dissertation research showed 40% better information retention compared to traditional single-track audio learning. The dual-track approach allows deep focus while maintaining alertness through background audio cues."</p>
-                        <footer>— Dr. Sarah Chen, PhD in Educational Psychology</footer>
-                    </div>
-
-                    <div class="use-case-examples">
-                        <div class="example">
-                            <strong>📚 Research Students:</strong> Academic papers + classical music
-                        </div>
-                        <div class="example">
-                            <strong>🧠 Medical Students:</strong> Anatomy lectures + binaural beats
-                        </div>
-                        <div class="example">
-                            <strong>📝 Language Learning:</strong> Foreign podcasts + focus soundscapes
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-content" id="enterprise">
-                    <div class="case-study">
-                        <div class="case-study-header">
-                            <h3>TechCorp Enterprise Deployment</h3>
-                            <div class="case-study-metrics">
-                                <span>📈 +60% course completion</span>
-                                <span>⏱️ -50% training time</span>
-                                <span>🎯 500+ employees</span>
-                            </div>
-                        </div>
-                        <p>"Our remote workforce used Simulisten for professional development training during focused work sessions. Employees completed 60% more courses while maintaining productivity, leading to company-wide deployment approval."</p>
-                        <footer>— Mark Rodriguez, VP Learning & Development</footer>
-                    </div>
-
-                    <div class="use-case-examples">
-                        <div class="example">
-                            <strong>💼 Sales Training:</strong> Product demos + productivity music
-                        </div>
-                        <div class="example">
-                            <strong>🔧 Technical Skills:</strong> Coding tutorials + focus beats
-                        </div>
-                        <div class="example">
-                            <strong>🎯 Leadership Development:</strong> Management podcasts + ambient sounds
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-content" id="personal">
-                    <div class="case-study">
-                        <div class="case-study-header">
-                            <h3>Remote Worker Productivity Study</h3>
-                            <div class="case-study-metrics">
-                                <span>📈 +35% focus time</span>
-                                <span>⏱️ 3.2hr average sessions</span>
-                                <span>🎯 89% daily usage</span>
-                            </div>
-                        </div>
-                        <p>"Working from home, I struggled to maintain focus during long work sessions. Simulisten lets me listen to educational content while my focus music keeps me in the zone. My productivity has increased dramatically."</p>
-                        <footer>— Jennifer Wu, Product Manager at Google</footer>
-                    </div>
-
-                    <div class="use-case-examples">
-                        <div class="example">
-                            <strong>🏠 Remote Work:</strong> Industry podcasts + lo-fi hip-hop
-                        </div>
-                        <div class="example">
-                            <strong>🚌 Commuting:</strong> Audiobooks + travel soundscapes
-                        </div>
-                        <div class="example">
-                            <strong>🏃‍♀️ Exercise:</strong> Motivational content + workout beats
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Business Model -->
-    <section id="business-model" class="business-model section-pad">
-        <div class="container">
-            <header class="section-head reveal">
-                <div class="section-badge">Business Model</div>
-                <h2>Multiple Revenue Streams, High Margins</h2>
-                <p>Diversified monetization strategy targeting both consumer and enterprise markets with recurring revenue focus.</p>
-            </header>
-
-            <div class="revenue-streams reveal">
-                <div class="revenue-grid">
-                    <div class="revenue-stream">
-                        <div class="stream-header">
-                            <h3>🎯 Freemium Consumer ($9.99/mo)</h3>
-                            <div class="revenue-percentage">40% of revenue</div>
-                        </div>
-                        <ul class="stream-features">
-                            <li>Basic dual-track functionality</li>
-                            <li>Premium features: AI optimization, cloud sync</li>
-                            <li>Target: 100K paid users by Q4 2026</li>
-                        </ul>
-                        <div class="stream-metrics">
-                            <span>ARPU: $9.99 • LTV: $180 • CAC: $12</span>
-                        </div>
-                    </div>
-
-                    <div class="revenue-stream primary">
-                        <div class="stream-header">
-                            <h3>🏢 Enterprise SaaS ($50-200/seat/mo)</h3>
-                            <div class="revenue-percentage">50% of revenue</div>
-                        </div>
-                        <ul class="stream-features">
-                            <li>Corporate learning platform integration</li>
-                            <li>Advanced analytics & reporting dashboard</li>
-                            <li>Custom content management & deployment</li>
-                        </ul>
-                        <div class="stream-metrics">
-                            <span>ARPU: $1,200 • LTV: $18,000 • CAC: $800</span>
-                        </div>
-                    </div>
-
-                    <div class="revenue-stream">
-                        <div class="stream-header">
-                            <h3>📊 Data & Analytics API</h3>
-                            <div class="revenue-percentage">10% of revenue</div>
-                        </div>
-                        <ul class="stream-features">
-                            <li>Learning efficiency insights</li>
-                            <li>Productivity optimization data</li>
-                            <li>White-label analytics solutions</li>
-                        </ul>
-                        <div class="stream-metrics">
-                            <span>High-margin recurring revenue stream</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="financial-projections reveal">
-                <h3>5-Year Financial Projections</h3>
-                <div class="projections-table">
-                    <div class="projection-row header">
-                        <div>Year</div>
-                        <div>Users</div>
-                        <div>Revenue</div>
-                        <div>Gross Margin</div>
-                    </div>
-                    <div class="projection-row">
-                        <div>2026</div>
-                        <div>50K</div>
-                        <div>$2.4M</div>
-                        <div>85%</div>
-                    </div>
-                    <div class="projection-row">
-                        <div>2027</div>
-                        <div>200K</div>
-                        <div>$12M</div>
-                        <div>87%</div>
-                    </div>
-                    <div class="projection-row">
-                        <div>2028</div>
-                        <div>500K</div>
-                        <div>$36M</div>
-                        <div>89%</div>
-                    </div>
-                    <div class="projection-row highlight">
-                        <div>2030</div>
-                        <div>2M+</div>
-                        <div>$180M</div>
-                        <div>90%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team -->
-    <section id="team" class="team section-pad">
-        <div class="container">
-            <header class="section-head reveal">
-                <div class="section-badge">Our Team</div>
-                <h2>Proven Execution Team</h2>
-                <p>Experienced founders with successful track record in mobile apps, EdTech, and enterprise software.</p>
-            </header>
-
-            <div class="team-grid reveal">
-                <div class="team-member">
-                    <div class="member-avatar">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                            <circle cx="12" cy="7" r="4"/>
-                        </svg>
-                    </div>
-                    <h3>Brendan Rodriguez</h3>
-                    <div class="member-title">Founder & CEO</div>
-                    <p>Former Apple engineer with 8+ years in mobile development. Led team that built audio processing features used by 100M+ users.</p>
-                    <div class="member-links">
-                        <a href="#">LinkedIn</a> • <a href="#">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-avatar">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                            <circle cx="12" cy="7" r="4"/>
-                        </svg>
-                    </div>
-                    <h3>Technical Advisor</h3>
-                    <div class="member-title">Machine Learning Lead</div>
-                    <p>PhD in Computer Science, former Google Research. Expert in audio processing and machine learning applications.</p>
-                    <div class="member-links">
-                        <a href="#">LinkedIn</a> • <a href="#">Research</a>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-avatar">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                            <circle cx="12" cy="7" r="4"/>
-                        </svg>
-                    </div>
-                    <h3>Business Advisor</h3>
-                    <div class="member-title">Go-to-Market Strategy</div>
-                    <p>Former VP Sales at Coursera, scaled EdTech platform from $10M to $100M ARR. Deep enterprise sales experience.</p>
-                    <div class="member-links">
-                        <a href="#">LinkedIn</a> • <a href="#">Portfolio</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="advisors reveal">
-                <h3>Strategic Advisors</h3>
-                <div class="advisor-list">
-                    <div class="advisor">Former Apple Audio Engineering Manager</div>
-                    <div class="advisor">Ex-Spotify Product Lead</div>
-                    <div class="advisor">EdTech Serial Entrepreneur (3 exits)</div>
-                    <div class="advisor">Enterprise Sales Expert (100+ deals)</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact/CTA -->
-    <section id="contact" class="contact section-pad">
-        <div class="container">
-            <div class="contact-content reveal">
-                <h2>Ready to Join the Audio Learning Revolution?</h2>
-                <p>We're raising $3M Series A to accelerate growth and capture market leadership in the exploding dual-track audio learning category.</p>
-                
-                <div class="investment-highlights">
-                    <div class="highlight">✅ Patent-pending technology with 18-month lead</div>
-                    <div class="highlight">✅ Proven traction: 10K users, 89% retention</div>
-                    <div class="highlight">✅ $366B addressable market</div>
-                    <div class="highlight">✅ Multiple revenue streams, high margins</div>
-                    <div class="highlight">✅ Experienced team with successful exits</div>
-                </div>
-
-                <div class="cta-buttons">
-                    <a href="mailto:invest@simulisten.com" class="button button-primary">
-                        Request Full Investment Deck
-                    </a>
-                    <a href="https://testflight.apple.com/join/SMP2wZG3" target="_blank" rel="noopener" class="button button-secondary">
-                        Try Live Product Demo
-                    </a>
-                </div>
-
-                <div class="contact-info">
-                    <p><strong>Investment Contact:</strong> invest@simulisten.com</p>
-                    <p><strong>Demo & Questions:</strong> hello@simulisten.com</p>
                 </div>
             </div>
         </div>
@@ -751,14 +259,33 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2026 Simulisten. All rights reserved. • Confidential Investment Materials</p>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="mailto:invest@simulisten.com">Investment Inquiries</a>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Simulisten</h3>
+                    <p>Revolutionizing how the world learns through dual audio technology.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#demo">Demo</a>
+                        <a href="#pricing">Pricing</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="#about">About</a>
+                        <a href="mailto:hello@simulisten.com">Contact</a>
+                        <a href="/privacy.html">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Simulisten. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
