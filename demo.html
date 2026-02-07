@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simulisten Demo — Dual Audio Playback</title>
+    <meta name="description" content="Try the Simulisten demo experience with dual audio and learn how to join the beta." />
+    <link rel="canonical" href="https://simulisten.com/demo.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Simulisten</h1>
+            </div>
+            <div class="nav-links">
+                <a href="/">Overview</a>
+                <a href="/demo.html">Demo</a>
+                <a href="/about.html">About</a>
+            </div>
+            <div class="nav-actions">
+                <a href="/demo.html" class="btn-secondary">Try Demo</a>
+                <a href="https://testflight.apple.com/join/SMP2wZG3" target="_blank" rel="noopener" class="btn-primary">Download App</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="demo-hero">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Simulisten Demo</h2>
+                <p>Blend learning content with focus music. Click to start, adjust levels, and hear the difference.</p>
+            </div>
+
+            <div class="demo-hero-actions">
+                <a href="https://testflight.apple.com/join/SMP2wZG3" target="_blank" rel="noopener" class="btn-primary">Join the Beta</a>
+                <a href="#audio-demo" class="btn-secondary">Try Web Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="audio-demo" class="demo-audio" data-dual-demo>
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Dual audio blend (web demo)</h2>
+                <p>Two separate tracks. Start both and fine-tune the mix.</p>
+            </div>
+
+            <div class="audio-demo-actions">
+                <button class="btn-primary" data-action="play-both">Play Both</button>
+                <button class="btn-secondary" data-action="pause-both">Pause Both</button>
+            </div>
+
+            <div class="audio-demo-grid">
+                <div class="audio-card" data-track="learning">
+                    <div class="audio-card-header">
+                        <h3>Learning Content</h3>
+                        <span class="audio-tag">Podcast</span>
+                    </div>
+                    <audio preload="none" data-audio="learning">
+                        <source src="assets/demo-learning.mp3" type="audio/mpeg" />
+                    </audio>
+
+                    <div class="audio-controls">
+                        <button class="audio-btn" data-action="toggle" data-target="learning">Play</button>
+                        <div class="audio-time" data-time="learning">0:00 / 0:00</div>
+                    </div>
+
+                    <div class="audio-progress">
+                        <div class="audio-progress-fill" data-progress="learning" style="width: 0%;"></div>
+                    </div>
+
+                    <label class="audio-volume">
+                        <span>Volume</span>
+                        <input type="range" min="0" max="100" value="75" data-volume="learning" />
+                    </label>
+                </div>
+
+                <div class="audio-card" data-track="focus">
+                    <div class="audio-card-header">
+                        <h3>Focus Music</h3>
+                        <span class="audio-tag">Lo‑Fi</span>
+                    </div>
+                    <audio preload="none" data-audio="focus">
+                        <source src="assets/demo-focus.mp3" type="audio/mpeg" />
+                    </audio>
+
+                    <div class="audio-controls">
+                        <button class="audio-btn" data-action="toggle" data-target="focus">Play</button>
+                        <div class="audio-time" data-time="focus">0:00 / 0:00</div>
+                    </div>
+
+                    <div class="audio-progress">
+                        <div class="audio-progress-fill" data-progress="focus" style="width: 0%;"></div>
+                    </div>
+
+                    <label class="audio-volume">
+                        <span>Volume</span>
+                        <input type="range" min="0" max="100" value="35" data-volume="focus" />
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-video">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Video demo (optional)</h2>
+                <p>Include a short walkthrough or product demo video here.</p>
+            </div>
+
+            <div class="video-placeholder">
+                <div class="video-frame">
+                    <div class="video-badge">Video Placeholder</div>
+                    <p>Replace with an embed or hosted video URL.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-checklist">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Join the Simulisten beta</h2>
+                <p>Minimal steps to get started on iOS.</p>
+            </div>
+
+            <ul class="checklist">
+                <li>
+                    <span class="check-icon">1</span>
+                    <div>
+                        <strong>Install TestFlight</strong>
+                        <p>Get TestFlight from the App Store.</p>
+                        <a href="https://apps.apple.com/app/testflight/id899247664" target="_blank" rel="noopener">Download TestFlight</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="check-icon">2</span>
+                    <div>
+                        <strong>Join Simulisten Beta</strong>
+                        <p>Accept the TestFlight invite and install Simulisten.</p>
+                        <a href="https://testflight.apple.com/join/SMP2wZG3" target="_blank" rel="noopener">Join Simulisten Beta</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Simulisten</h3>
+                    <p>Revolutionizing how the world learns through dual audio technology.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <a href="/">Overview</a>
+                        <a href="/demo.html">Demo</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="/about.html">About</a>
+                        <a href="mailto:hello@simulisten.com">Contact</a>
+                        <a href="/privacy.html">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Simulisten. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

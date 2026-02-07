@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeDemoPlayer();
     initializeMobileMenu();
     initializeScrollAnimations();
+    initializeDualDemoAudio();
 });
 
 // ============================================
@@ -344,3 +345,86 @@ window.addEventListener('resize', debounce(() => {
 // ============================================
 console.log('%c🎵 Simulisten - Dual Audio Experience', 'color: #7c3aed; font-size: 16px; font-weight: bold;');
 console.log('%cPowered by ElevenLabs-inspired design', 'color: #6b7280; font-size: 12px;');
+
+function initializeDualDemoAudio() {
+    const sections = document.querySelectorAll('[data-dual-demo]');
+    if (!sections.length) return;
+
+    const formatTime = (time) => {
+        if (Number.isNaN(time) || !Number.isFinite(time)) return '0:00';
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60).toString().padStart(2, '0');
+        return `${minutes}:${seconds}`;
+    };
+
+    sections.forEach(section => {
+        const audios = {
+            learning: section.querySelector('[data-audio="learning"]'),
+            focus: section.querySelector('[data-audio="focus"]')
+        };
+
+        const playBothBtn = section.querySelector('[data-action="play-both"]');
+        const pauseBothBtn = section.querySelector('[data-action="pause-both"]');
+
+        const toggleButtons = section.querySelectorAll('[data-action="toggle"]');
+        toggleButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = btn.getAttribute('data-target');
+                const audio = audios[target];
+                if (!audio) return;
+
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+        });
+
+        playBothBtn?.addEventListener('click', () => {
+            Object.values(audios).forEach(audio => audio?.play());
+        });
+
+        pauseBothBtn?.addEventListener('click', () => {
+            Object.values(audios).forEach(audio => audio?.pause());
+        });
+
+        const volumeSliders = section.querySelectorAll('[data-volume]');
+        volumeSliders.forEach(slider => {
+            const target = slider.getAttribute('data-volume');
+            const audio = audios[target];
+            if (!audio) return;
+
+            audio.volume = Number(slider.value) / 100;
+
+            slider.addEventListener('input', () => {
+                audio.volume = Number(slider.value) / 100;
+            });
+        });
+
+        Object.entries(audios).forEach(([key, audio]) => {
+            if (!audio) return;
+
+            const timeEl = section.querySelector(`[data-time="${key}"]`);
+            const progressFill = section.querySelector(`[data-progress="${key}"]`);
+            const button = section.querySelector(`[data-action="toggle"][data-target="${key}"]`);
+
+            audio.addEventListener('timeupdate', () => {
+                if (timeEl) {
+                    timeEl.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+                }
+                if (progressFill && audio.duration) {
+                    progressFill.style.width = `${(audio.currentTime / audio.duration) * 100}%`;
+                }
+            });
+
+            audio.addEventListener('play', () => {
+                if (button) button.textContent = 'Pause';
+            });
+
+            audio.addEventListener('pause', () => {
+                if (button) button.textContent = 'Play';
+            });
+        });
+    });
+}
