@@ -171,7 +171,7 @@ function initializeScrollAnimations() {
     }, observerOptions);
     
     // Observe all feature cards and sections
-    const animateElements = document.querySelectorAll('.feature-card, .section-header, .demo-text');
+    const animateElements = document.querySelectorAll('.feature-card, .section-header, .demo-text, .audio-card, .checklist li');
     animateElements.forEach(el => observer.observe(el));
 }
 
@@ -258,17 +258,27 @@ function initializeFeatureCards() {
 // ============================================
 function initializeNavbarScroll() {
     const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+    const isDemoPage = document.body.classList.contains('demo-page');
+    const isHomePage = document.body.classList.contains('home-page');
     let lastScrollY = window.scrollY;
     
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
         
-        if (currentScrollY > 100) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+        if (isDemoPage || isHomePage) {
+            navbar.style.background = currentScrollY > 100
+                ? 'rgba(6, 9, 19, 0.95)'
+                : 'rgba(6, 9, 19, 0.9)';
+            navbar.style.boxShadow = '0 10px 30px rgba(6, 9, 19, 0.6)';
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.8)';
-            navbar.style.boxShadow = 'none';
+            if (currentScrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.8)';
+                navbar.style.boxShadow = 'none';
+            }
         }
         
         lastScrollY = currentScrollY;
