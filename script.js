@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeMobileMenu();
     initializeScrollAnimations();
     initializeDualDemoAudio();
+    initializeTrackBuilder();
 });
 
 // ============================================
@@ -449,4 +450,127 @@ function initializeDualDemoAudio() {
             });
         });
     });
+}
+
+// ============================================
+// Track Builder (Home Page)
+// ============================================
+function initializeTrackBuilder() {
+    const results1 = document.getElementById('track-results-1');
+    const results2 = document.getElementById('track-results-2');
+    if (!results1 && !results2) return;
+
+    const ICONS = {
+        audiobook: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
+        podcast:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>',
+        ambient:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>',
+        energetic: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
+        focus:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>',
+    };
+
+    const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" width="10" height="10"><polyline points="20 6 9 17 4 12"/></svg>';
+
+    const learningData = [
+        { id: 'l1', title: 'Atomic Habits',          author: 'James Clear',       type: 'Audiobook', cat: 'audiobook', icon: 'audiobook', duration: '5h 35m'  },
+        { id: 'l2', title: 'The Science of Learning', author: 'Barbara Oakley',    type: 'Podcast',   cat: 'podcast',   icon: 'podcast',   duration: '42 min'  },
+        { id: 'l3', title: 'Sapiens',                 author: 'Yuval Noah Harari', type: 'Audiobook', cat: 'audiobook', icon: 'audiobook', duration: '15h 17m' },
+        { id: 'l4', title: 'How I Built This',        author: 'NPR',               type: 'Podcast',   cat: 'podcast',   icon: 'podcast',   duration: '58 min'  },
+        { id: 'l5', title: 'Deep Work',               author: 'Cal Newport',       type: 'Audiobook', cat: 'audiobook', icon: 'audiobook', duration: '7h 44m'  },
+        { id: 'l6', title: 'Huberman Lab',            author: 'Andrew Huberman',   type: 'Podcast',   cat: 'podcast',   icon: 'podcast',   duration: '1h 48m'  },
+        { id: 'l7', title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman',   type: 'Audiobook', cat: 'audiobook', icon: 'audiobook', duration: '20h 2m'  },
+        { id: 'l8', title: 'Lex Fridman Podcast',     author: 'Lex Fridman',       type: 'Podcast',   cat: 'podcast',   icon: 'podcast',   duration: '2h 15m'  },
+    ];
+
+    const musicData = [
+        { id: 'm1', title: 'Deep Focus Flow',    author: 'Atmospheric Layers', type: 'Ambient',   cat: 'ambient',   icon: 'ambient',   duration: '∞ Loop' },
+        { id: 'm2', title: 'Morning Surge',       author: 'BPM Labs',           type: 'Energetic', cat: 'energetic', icon: 'energetic', duration: '∞ Loop' },
+        { id: 'm3', title: 'Alpha Wave Session',  author: 'NeuroSound',         type: 'Focus',     cat: 'focus',     icon: 'focus',     duration: '∞ Loop' },
+        { id: 'm4', title: 'Lo-Fi Study Beats',   author: 'ChillBeats Co.',     type: 'Focus',     cat: 'focus',     icon: 'focus',     duration: '∞ Loop' },
+        { id: 'm5', title: 'Thunderstorm',         author: 'Nature Sounds',      type: 'Ambient',   cat: 'ambient',   icon: 'ambient',   duration: '∞ Loop' },
+        { id: 'm6', title: 'Gym Power Mix',        author: 'Athletic Audio',     type: 'Energetic', cat: 'energetic', icon: 'energetic', duration: '∞ Loop' },
+        { id: 'm7', title: 'Binaural Theta',       author: 'MindFreq Studio',    type: 'Focus',     cat: 'focus',     icon: 'focus',     duration: '∞ Loop' },
+        { id: 'm8', title: 'Café Ambience',        author: 'Urban Sounds',       type: 'Ambient',   cat: 'ambient',   icon: 'ambient',   duration: '∞ Loop' },
+    ];
+
+    const selected = { 1: null, 2: null };
+    const filters  = { 1: { query: '', cat: 'all' }, 2: { query: '', cat: 'all' } };
+
+    function escHtml(str) {
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
+    }
+
+    function renderPanel(panelId, pool) {
+        const el = document.getElementById(`track-results-${panelId}`);
+        if (!el) return;
+        const { query, cat } = filters[panelId];
+        const q = query.trim().toLowerCase();
+        const items = pool.filter(t =>
+            (cat === 'all' || t.cat === cat) &&
+            (!q || t.title.toLowerCase().includes(q) || t.author.toLowerCase().includes(q))
+        );
+        if (!items.length) {
+            el.innerHTML = `<div class="track-empty">No results${q ? ` for &ldquo;${escHtml(q)}&rdquo;` : ''}</div>`;
+            return;
+        }
+        el.innerHTML = items.map(t => {
+            const sel = selected[panelId]?.id === t.id;
+            return `<button class="track-item${sel ? ' selected' : ''}" data-panel="${panelId}" data-id="${escHtml(t.id)}" type="button" role="option" aria-selected="${sel}">
+                <div class="track-item-icon icon-${escHtml(t.icon)}">${ICONS[t.icon] ?? ''}</div>
+                <div class="track-item-info">
+                    <div class="track-item-title">${escHtml(t.title)}</div>
+                    <div class="track-item-meta">${escHtml(t.author)}&nbsp;&middot;&nbsp;${escHtml(t.type)}</div>
+                </div>
+                <div class="track-item-duration">${escHtml(t.duration)}</div>
+                <div class="track-item-check">${CHECK}</div>
+            </button>`;
+        }).join('');
+        el.querySelectorAll('.track-item').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const pId = parseInt(btn.dataset.panel, 10);
+                const pool2 = pId === 1 ? learningData : musicData;
+                selected[pId] = pool2.find(t => t.id === btn.dataset.id) ?? null;
+                renderPanel(pId, pool2);
+                syncSessionBar();
+            });
+        });
+    }
+
+    function syncSessionBar() {
+        const t1 = selected[1];
+        const t2 = selected[2];
+        const el1 = document.getElementById('session-title-1');
+        const el2 = document.getElementById('session-title-2');
+        const bar = document.getElementById('session-bar');
+        if (el1) { el1.textContent = t1 ? t1.title : 'Select learning content'; el1.classList.toggle('has-selection', !!t1); }
+        if (el2) { el2.textContent = t2 ? t2.title : 'Select background music';  el2.classList.toggle('has-selection', !!t2); }
+        if (bar) bar.classList.toggle('session-ready', !!(t1 && t2));
+    }
+
+    // Search inputs
+    document.querySelectorAll('.track-search-input').forEach(input => {
+        input.addEventListener('input', () => {
+            const pId = parseInt(input.dataset.panel, 10);
+            filters[pId].query = input.value;
+            renderPanel(pId, pId === 1 ? learningData : musicData);
+        });
+    });
+
+    // Category pills
+    document.querySelectorAll('.pill[data-panel]').forEach(pill => {
+        pill.addEventListener('click', () => {
+            const pId = parseInt(pill.dataset.panel, 10);
+            filters[pId].cat = pill.dataset.cat;
+            document.querySelectorAll(`.pill[data-panel="${pId}"]`).forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+            renderPanel(pId, pId === 1 ? learningData : musicData);
+        });
+    });
+
+    // Initial render
+    renderPanel(1, learningData);
+    renderPanel(2, musicData);
 }
