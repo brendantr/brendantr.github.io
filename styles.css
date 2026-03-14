@@ -999,29 +999,6 @@ body {
   cursor: pointer;
 }
 
-.demo-video {
-  background: var(--gray-50);
-}
-
-.video-placeholder .video-frame {
-  border: 2px dashed var(--gray-300);
-  border-radius: var(--radius-xl);
-  padding: var(--spacing-3xl);
-  text-align: center;
-  color: var(--gray-600);
-  background: var(--white);
-}
-
-.video-badge {
-  display: inline-block;
-  font-size: var(--font-size-xs);
-  background: var(--gray-100);
-  border: 1px solid var(--gray-200);
-  padding: 4px 10px;
-  border-radius: 999px;
-  margin-bottom: var(--spacing-md);
-}
-
 .demo-checklist {
   background: var(--white);
 }
