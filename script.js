@@ -409,6 +409,18 @@ function initializeDualDemoAudio() {
             const progressFill = section.querySelector(`[data-progress="${key}"]`);
             const button = section.querySelector(`[data-action="toggle"][data-target="${key}"]`);
 
+            audio.addEventListener('loadedmetadata', () => {
+                if (timeEl) {
+                    timeEl.textContent = `${formatTime(0)} / ${formatTime(audio.duration)}`;
+                }
+            });
+
+            audio.addEventListener('error', () => {
+                if (timeEl) {
+                    timeEl.textContent = 'Audio failed to load';
+                }
+            });
+
             audio.addEventListener('timeupdate', () => {
                 if (timeEl) {
                     timeEl.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
